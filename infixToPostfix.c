@@ -122,7 +122,7 @@ char *infixToPostfix(char *input)
         }
         else if (isOperator(input[i]))
         {
-            while (st->top > -1 && precedence(input[i]) <= precedence(peek(st)) && precedence(peek(st))!=3)
+            while (st->top > -1 && precedence(input[i]) <= precedence(peek(st)) && precedence(input[i])!=3)
             {
                 ans[j++] = peek(st);
                 pop(st);
@@ -143,7 +143,7 @@ char *infixToPostfix(char *input)
 
 int main()
 {
-    char infix[100] = "2+(5^6)^7";
+    char infix[100] = "8*(5^4+2)-6^2/(9*3)";
 
     // Function call
     char *postfix = infixToPostfix(infix);

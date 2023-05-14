@@ -156,7 +156,7 @@ char *infixToPostfix(char *input)
 
 int main()
 {
-    char infix[100] = "K+L-M*N+(O^P)*W/U/V*T+Q";
+    char infix[100] = "8*(5^4+2)-6^2/(9*3)";
 
     // Function call
     char *postfix = infixToPostfix(infix);
